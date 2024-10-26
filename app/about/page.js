@@ -76,7 +76,7 @@ export default function About() {
                 .hero {
                     text-align: center;
                     padding: 8rem 0;
-                    background-image: url('/images/soltax.jpeg');
+                    background-image: url('/images/Logo.jpg');
                     background-size: cover;
                     background-position: center;
                     position: relative;
@@ -188,8 +188,12 @@ export default function About() {
                 }
 
                 @media (max-width: 768px) {
-                    .mission {
-                        flex-direction: column;
+                    .about-container {
+                        padding: 1rem;
+                    }
+
+                    .hero {
+                        padding: 4rem 0;
                     }
 
                     .hero h1 {
@@ -200,8 +204,64 @@ export default function About() {
                         font-size: 1.2rem;
                     }
 
+                    .mission {
+                        flex-direction: column;
+                        gap: 1rem;
+                    }
+
                     .mission h2, .values h2 {
                         font-size: 2rem;
+                    }
+
+                    .mission p {
+                        font-size: 1rem;
+                    }
+
+                    .image-container {
+                        max-width: 100%;
+                        height: auto;
+                    }
+
+                    .values-grid {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .value-item h3 {
+                        font-size: 1.2rem;
+                    }
+
+                    .value-item p {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .hero h1 {
+                        font-size: 2rem;
+                    }
+
+                    .hero p {
+                        font-size: 1rem;
+                    }
+
+                    .mission h2, .values h2 {
+                        font-size: 1.8rem;
+                    }
+
+                    .mission p {
+                        font-size: 0.9rem;
+                    }
+
+                    .value-item {
+                        padding: 1rem;
+                    }
+
+                    .value-item h3 {
+                        font-size: 1.1rem;
+                    }
+
+                    .value-item p {
+                        font-size: 0.8rem;
                     }
                 }
             `}</style>

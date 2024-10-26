@@ -5,11 +5,11 @@ import { FaCalculator, FaChartLine, FaClock, FaCloudUploadAlt, FaShieldAlt } fro
 
 export default function Bookkeeping() {
     const benefits = [
-        { icon: <FaCalculator />, text: 'Accurate financial records' },
-        { icon: <FaChartLine />, text: 'Improved financial insights' },
-        { icon: <FaClock />, text: 'Time-saving for business owners' },
-        { icon: <FaCloudUploadAlt />, text: 'Cloud-based solutions for easy access' },
-        { icon: <FaShieldAlt />, text: 'Compliance with tax regulations' },
+        { icon: <FaCalculator />, text: 'Accurate financial records', description: 'Ensure your books are always up-to-date and error-free, providing a clear picture of your financial position.' },
+        { icon: <FaChartLine />, text: 'Improved financial insights', description: 'Gain valuable insights into your business performance with detailed financial reports and analysis.' },
+        { icon: <FaClock />, text: 'Time-saving for business owners', description: 'Focus on running your business while we handle the time-consuming task of maintaining your financial records.' },
+        { icon: <FaCloudUploadAlt />, text: 'Cloud-based solutions', description: 'Access your financial data anytime, anywhere with our secure cloud-based bookkeeping systems.' },
+        { icon: <FaShieldAlt />, text: 'Compliance with regulations', description: 'Stay compliant with Irish tax laws and accounting standards, avoiding penalties and legal issues.' },
     ];
 
     return (
@@ -17,8 +17,8 @@ export default function Bookkeeping() {
             <section className="hero">
                 <div className="overlay"></div>
                 <div className="content">
-                    <h1>Bookkeeping Services</h1>
-                    <p>Streamline your financial records and focus on growing your business</p>
+                    <h1>Professional Bookkeeping Services</h1>
+                    <p>Accurate and efficient financial record-keeping tailored for Irish businesses</p>
                 </div>
             </section>
 
@@ -26,9 +26,21 @@ export default function Bookkeeping() {
                 <div className="content">
                     <h2>Comprehensive Bookkeeping Support</h2>
                     <p>
-                        Our bookkeeping services are designed to take the hassle out of financial record-keeping, 
-                        ensuring your business maintains accurate and up-to-date books. From daily transactions 
-                        to monthly reconciliations, we&apos;ve got you covered.
+                        At Soltax, we offer professional bookkeeping services designed to meet the unique needs of Irish businesses. Our experienced team ensures your financial records are accurate, up-to-date, and compliant with Irish accounting standards and tax regulations.
+                    </p>
+                    <p>
+                        We handle all aspects of your day-to-day financial transactions, including:
+                    </p>
+                    <ul>
+                        <li>Recording income and expenses</li>
+                        <li>Bank reconciliations</li>
+                        <li>Accounts payable and receivable management</li>
+                        <li>Payroll processing</li>
+                        <li>VAT return preparation</li>
+                        <li>Monthly financial reporting</li>
+                    </ul>
+                    <p>
+                        By outsourcing your bookkeeping to us, you free up valuable time to focus on growing your business while having peace of mind that your finances are in expert hands.
                     </p>
                 </div>
             </section>
@@ -40,18 +52,11 @@ export default function Bookkeeping() {
                         {benefits.map((benefit, index) => (
                             <div key={index} className="benefit-item">
                                 <div className="icon">{benefit.icon}</div>
-                                <p>{benefit.text}</p>
+                                <h3>{benefit.text}</h3>
+                                <p>{benefit.description}</p>
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
-
-            <section className="cta">
-                <div className="content">
-                    <h2>Ready to Streamline Your Bookkeeping?</h2>
-                    <p>Let&apos;s discuss how our bookkeeping services can benefit your business.</p>
-                    <button className="cta-button">Contact Us Today</button>
                 </div>
             </section>
 
@@ -62,7 +67,7 @@ export default function Bookkeeping() {
                     line-height: 1.6;
                 }
                 .hero {
-                    background-image: url('/images/soltax.jpeg');
+                    background-image: url('/images/Logo.jpg');
                     background-size: cover;
                     background-position: center;
                     color: white;
@@ -98,7 +103,7 @@ export default function Bookkeeping() {
                     margin: 0 auto;
                     padding: 2rem;
                 }
-                .description, .benefits, .cta {
+                .description, .benefits {
                     padding: 4rem 2rem;
                 }
                 .description {
@@ -130,36 +135,82 @@ export default function Bookkeeping() {
                     color: #0066cc;
                     margin-bottom: 1rem;
                 }
-                .cta {
-                    background-color: #f0f8ff;
-                    text-align: center;
+                .description ul {
+                    list-style-type: disc;
+                    margin-left: 20px;
+                    margin-bottom: 1rem;
                 }
-                .cta-button {
-                    background-color: #0066cc;
-                    color: white;
-                    border: none;
-                    padding: 1rem 2rem;
-                    font-size: 1.1rem;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease, transform 0.3s ease;
+                .benefit-item h3 {
+                    font-size: 1.2rem;
+                    margin-bottom: 0.5rem;
+                    color: #0066cc;
                 }
-                .cta-button:hover {
-                    background-color: #0052a3;
-                    transform: translateY(-2px);
+                .benefit-item p {
+                    font-size: 0.9rem;
+                    color: #555;
                 }
+
                 @media (max-width: 768px) {
+                    .hero {
+                        padding: 4rem 1rem;
+                    }
                     .hero h1 {
                         font-size: 2.5rem;
                     }
                     .hero p {
                         font-size: 1.1rem;
                     }
+                    .content {
+                        padding: 1.5rem;
+                    }
                     h2 {
-                        font-size: 1.75rem;
+                        font-size: 1.8rem;
+                    }
+                    .description, .benefits {
+                        padding: 3rem 1rem;
+                    }
+                    .benefits-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1.5rem;
+                    }
+                    .benefit-item {
+                        padding: 1.2rem;
+                    }
+                    .icon {
+                        font-size: 2rem;
+                    }
+                    .benefit-item h3 {
+                        font-size: 1.1rem;
+                    }
+                    .benefit-item p {
+                        font-size: 0.85rem;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .hero h1 {
+                        font-size: 2rem;
+                    }
+                    .hero p {
+                        font-size: 1rem;
+                    }
+                    h2 {
+                        font-size: 1.5rem;
                     }
                     .benefits-grid {
                         grid-template-columns: 1fr;
+                    }
+                    .benefit-item {
+                        padding: 1rem;
+                    }
+                    .icon {
+                        font-size: 1.8rem;
+                    }
+                    .benefit-item h3 {
+                        font-size: 1rem;
+                    }
+                    .benefit-item p {
+                        font-size: 0.8rem;
                     }
                 }
             `}</style>

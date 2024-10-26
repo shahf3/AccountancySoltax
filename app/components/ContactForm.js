@@ -85,47 +85,98 @@ const ContactForm = () => {
       </form>
 
       <style jsx>{`
-        div {
-          max-width: 600px;
+        .contact-form {
+          background-color: #ffffff;
+          padding: 4rem;
+          border-radius: 16px;
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+          max-width: 900px;
           margin: 0 auto;
-          padding: 20px;
-          background-color: #f9f9f9;
-          border-radius: 8px;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-          text-align: center;
-          margin-bottom: 20px;
+        .form-group {
+          margin-bottom: 2rem;
         }
-        form {
-          display: flex;
-          flex-direction: column;
+        label {
+          display: block;
+          margin-bottom: 0.75rem;
+          font-weight: 600;
+          color: #333;
+          font-size: 1.2rem;
         }
-        input, textarea {
-          margin: 0.5rem 0;
-          padding: 0.8rem;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          font-size: 16px;
+        input,
+        textarea {
+          width: 100%;
+          padding: 1.25rem;
+          border: 2px solid #e0e0e0;
+          border-radius: 10px;
+          font-size: 1.2rem;
+          transition: border-color 0.3s ease;
+        }
+        input:focus,
+        textarea:focus {
+          outline: none;
+          border-color: #0070f3;
         }
         textarea {
+          min-height: 200px;
           resize: vertical;
         }
         button {
-          padding: 0.7rem;
-          background-color: #002147;
-          color: white;
+          background-color: #0070f3;
+          color: #ffffff;
           border: none;
-          border-radius: 4px;
+          padding: 1.25rem 2.5rem;
+          font-size: 1.3rem;
+          border-radius: 10px;
           cursor: pointer;
-          font-size: 16px;
+          transition: background-color 0.3s ease;
         }
         button:hover {
-          background-color: #004080;
+          background-color: #0051a2;
         }
-        p {
-          text-align: center;
-          color: green;
+        @media (max-width: 1200px) {
+          .contact-form {
+            padding: 3rem;
+            max-width: 800px;
+          }
+          label {
+            font-size: 1.1rem;
+          }
+          input,
+          textarea,
+          button {
+            font-size: 1.1rem;
+            padding: 1.1rem;
+          }
+        }
+        @media (max-width: 768px) {
+          .contact-form {
+            padding: 2.5rem;
+            max-width: 600px;
+          }
+          label {
+            font-size: 1rem;
+          }
+          input,
+          textarea,
+          button {
+            font-size: 1rem;
+            padding: 1rem;
+          }
+        }
+        @media (max-width: 480px) {
+          .contact-form {
+            padding: 2rem;
+          }
+          label {
+            font-size: 0.9rem;
+          }
+          input,
+          textarea,
+          button {
+            font-size: 0.9rem;
+            padding: 0.9rem;
+          }
         }
       `}</style>
     </div>

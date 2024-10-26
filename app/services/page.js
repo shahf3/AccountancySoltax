@@ -16,7 +16,7 @@ export default function Services() {
     ];
 
     return (
-        <>
+        <div className="services-container">
             <section className="services-section">
                 <div className="overlay" />
                 <div className="content">
@@ -41,15 +41,6 @@ export default function Services() {
                 </div>
             </section>
 
-            <section className="contact-section">
-                <div className="contact-card">
-                    <h2>Let&apos;s Connect!</h2>
-                    <p>We are here to help you with all your financial needs. Reach out to us and let&apos;s discuss how we can assist you in achieving your goals.</p>
-                    <Link href="/contact">
-                        <span className="cta-button">Contact Us</span>
-                    </Link>
-                </div>
-            </section>
 
             <style jsx>{`
                 .services-section {
@@ -192,7 +183,17 @@ export default function Services() {
                     transform: translateY(-3px);
                 }
 
+                @media (max-width: 1024px) {
+                    .service-container {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+
                 @media (max-width: 768px) {
+                    .services-container {
+                        padding: 2rem 1rem;
+                    }
+
                     .title {
                         font-size: 2.5rem;
                     }
@@ -202,10 +203,49 @@ export default function Services() {
                     }
 
                     .service-container {
-                        grid-template-columns: 1fr;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1.5rem;
+                    }
+
+                    .service-item {
+                        padding: 1.5rem;
+                    }
+
+                    .service-icon {
+                        font-size: 2.5rem;
+                    }
+
+                    .service-title {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .title {
+                        font-size: 2rem;
+                    }
+
+                    .paragraph {
+                        font-size: 0.9rem;
+                    }
+
+                    .service-container {
+                        gap: 1rem;
+                    }
+
+                    .service-item {
+                        padding: 1rem;
+                    }
+
+                    .service-icon {
+                        font-size: 2rem;
+                    }
+
+                    .service-title {
+                        font-size: 1rem;
                     }
                 }
             `}</style>
-        </>
+        </div>
     );
 }

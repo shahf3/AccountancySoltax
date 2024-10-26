@@ -73,11 +73,11 @@ export default function Home() {
         }
 
         .home-section {
-          min-height: 100vh;
+          min-height: 80vh;
           display: flex;
           align-items: center;
           justify-content: center;
-          background-image: url('/images/soltax.jpeg');
+          background-image: url('/images/Logo.jpg');
           background-size: cover;
           background-position: center;
           position: relative;
@@ -100,7 +100,7 @@ export default function Home() {
           z-index: 1;
           text-align: center;
           max-width: 800px;
-          padding: 2rem;
+          padding: 1rem;
         }
 
         .animate-title {
@@ -119,22 +119,22 @@ export default function Home() {
         }
 
         h1 {
-          font-size: 3.5rem;
+          font-size: 2.5rem;
           font-weight: 700;
           margin-bottom: 1.5rem;
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         p {
-          font-size: 1.2rem;
+          font-size: 1rem;
           line-height: 1.6;
           margin-bottom: 2rem;
           text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         button {
-          padding: 1rem 2rem;
-          font-size: 1.1rem;
+          padding: 0.8rem 1.5rem;
+          font-size: 1rem;
           font-weight: 600;
           color: #2c3e50;
           background-color: #ffffff;
@@ -153,20 +153,20 @@ export default function Home() {
 
         .services-section {
           background-color: #f8f9fa;
-          padding: 5rem 2rem;
+          padding: 3rem 1rem;
           text-align: center;
         }
 
         .services-section h2 {
-          font-size: 2.5rem;
+          font-size: 2rem;
           color: #2c3e50;
           margin-bottom: 1rem;
         }
 
         .services-section p {
-          font-size: 1.2rem;
+          font-size: 1rem;
           color: #34495e;
-          margin-bottom: 3rem;
+          margin-bottom: 2rem;
         }
 
         .services-list {
@@ -182,7 +182,7 @@ export default function Home() {
           display: flex;
           align-items: center;
           background-color: #ffffff;
-          padding: 1rem 1.5rem;
+          padding: 0.8rem 1.2rem;
           border-radius: 50px;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
           transition: all 0.3s ease;
@@ -202,28 +202,158 @@ export default function Home() {
         }
 
         .service-name {
-          font-size: 1rem;
+          font-size: 0.9rem;
           color: #2c3e50;
           font-weight: 500;
         }
 
+        @media (max-width: 1200px) {
+          .services-list {
+            max-width: 900px;
+          }
+        }
+
+        @media (max-width: 992px) {
+          h1 {
+            font-size: 2.2rem;
+          }
+
+          .services-list {
+            max-width: 700px;
+            gap: 1.5rem;
+          }
+
+          .service-item {
+            padding: 0.7rem 1rem;
+          }
+        }
+
         @media (max-width: 768px) {
           h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
           }
 
           p {
-            font-size: 1rem;
+            font-size: 0.9rem;
+          }
+
+          .home-section {
+            min-height: 70vh;
+          }
+
+          .content {
+            padding: 1rem;
+            max-width: 90%;
+          }
+
+          button {
+            padding: 0.7rem 1.3rem;
+            font-size: 0.9rem;
+          }
+
+          .services-section {
+            padding: 2.5rem 1rem;
+          }
+
+          .services-section h2 {
+            font-size: 1.8rem;
+          }
+
+          .services-section p {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
           }
 
           .services-list {
             flex-direction: column;
             align-items: center;
+            gap: 1rem;
           }
 
           .service-item {
             width: 100%;
-            max-width: 300px;
+            max-width: 280px;
+            padding: 0.6rem 1rem;
+          }
+
+          .service-name {
+            font-size: 0.85rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          h1 {
+            font-size: 1.8rem;
+          }
+
+          p {
+            font-size: 0.85rem;
+          }
+
+          .home-section {
+            min-height: 60vh;
+          }
+
+          .content {
+            max-width: 95%;
+          }
+
+          button {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.85rem;
+          }
+
+          .services-section h2 {
+            font-size: 1.6rem;
+          }
+
+          .services-section p {
+            font-size: 0.85rem;
+          }
+
+          .service-item {
+            max-width: 250px;
+            padding: 0.5rem 0.9rem;
+          }
+
+          .service-name {
+            font-size: 0.8rem;
+          }
+        }
+
+        @media (max-width: 400px) {
+          h1 {
+            font-size: 1.6rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+
+          .home-section {
+            min-height: 50vh;
+          }
+
+          button {
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+          }
+
+          .services-section h2 {
+            font-size: 1.4rem;
+          }
+
+          .services-section p {
+            font-size: 0.8rem;
+          }
+
+          .service-item {
+            max-width: 220px;
+            padding: 0.4rem 0.8rem;
+          }
+
+          .service-name {
+            font-size: 0.75rem;
           }
         }
       `}</style>

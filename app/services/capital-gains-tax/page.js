@@ -1,7 +1,7 @@
 'use client'; // Marking this component as a Client Component
 
 import React, { useState } from 'react';
-import { FaMoneyBillWave, FaChartLine, FaFileAlt } from 'react-icons/fa';
+import { FaMoneyBillWave, FaChartLine, FaFileAlt, FaUserTie, FaBalanceScale, FaHandshake, FaClipboardCheck } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function CapitalGainsTax() {
@@ -30,9 +30,37 @@ export default function CapitalGainsTax() {
     },
   ];
 
+  const reasons = [
+    {
+      icon: <FaUserTie />,
+      title: 'Expert Knowledge',
+      text: 'Our team of tax professionals has in-depth knowledge of Irish CGT legislation and stays updated with the latest changes in tax laws.'
+    },
+    {
+      icon: <FaChartLine />,
+      title: 'Strategic Planning',
+      text: 'We provide proactive CGT planning, helping you make informed decisions about asset disposals to optimize your tax position.'
+    },
+    {
+      icon: <FaBalanceScale />,
+      title: 'Tailored Solutions',
+      text: 'We offer personalized CGT strategies that align with your financial goals and specific circumstances.'
+    },
+    {
+      icon: <FaHandshake />,
+      title: 'Clear Communication',
+      text: 'We explain complex CGT concepts in simple terms, ensuring you understand your tax obligations and opportunities.'
+    },
+    {
+      icon: <FaClipboardCheck />,
+      title: 'Compliance Assurance',
+      text: 'Our meticulous approach ensures accurate CGT calculations and timely filings, keeping you compliant with Revenue requirements.'
+    }
+  ];
+
   return (
     <main className="standard-design">
-      <section className="hero" style={{ backgroundImage: `url('/images/soltax.jpeg')` }}>
+      <section className="hero" style={{ backgroundImage: `url('/images/Logo.jpg')` }}>
         <div className="overlay"></div>
         <div className="content">
           <h1>Capital Gains Tax</h1>
@@ -59,6 +87,20 @@ export default function CapitalGainsTax() {
         </div>
       </section>
 
+      <section className="why-choose">
+        <div className="content">
+          <h2>Why Choose Soltax for Capital Gains Tax Services?</h2>
+          <div className="reasons-grid">
+            {reasons.map((reason, index) => (
+              <div key={index} className="reason-item">
+                <div className="reason-icon">{reason.icon}</div>
+                <h3>{reason.title}</h3>
+                <p>{reason.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <style jsx>{`
         .standard-design {
@@ -109,7 +151,7 @@ export default function CapitalGainsTax() {
           border-radius: 10px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           padding: 1.5rem;
-          width: 280px;
+          width: calc(25% - 1.125rem);
           text-align: center;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -127,6 +169,162 @@ export default function CapitalGainsTax() {
           margin-bottom: 0.5rem;
         }
         
+        @media (max-width: 1024px) {
+          .card {
+            width: calc(33.33% - 1rem);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .standard-design {
+            padding: 0 1rem;
+          }
+          .hero {
+            height: 40vh;
+          }
+          .content h1 {
+            font-size: 2.5rem;
+          }
+          .content p {
+            font-size: 1rem;
+          }
+          .services h2 {
+            font-size: 1.8rem;
+          }
+          .card-container {
+            gap: 1rem;
+          }
+          .card {
+            width: calc(50% - 0.5rem);
+            padding: 1rem;
+          }
+          .card h3 {
+            font-size: 1.2rem;
+          }
+          .card p {
+            font-size: 0.9rem;
+          }
+          .icon {
+            font-size: 2rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hero {
+            height: 30vh;
+          }
+          .content h1 {
+            font-size: 2rem;
+          }
+          .content p {
+            font-size: 0.9rem;
+          }
+          .services h2 {
+            font-size: 1.5rem;
+          }
+          .card-container {
+            gap: 0.75rem;
+          }
+          .card {
+            width: calc(50% - 0.375rem);
+            padding: 0.75rem;
+          }
+          .card h3 {
+            font-size: 1rem;
+          }
+          .card p {
+            font-size: 0.8rem;
+          }
+          .icon {
+            font-size: 1.5rem;
+          }
+        }
+
+        .why-choose {
+          background-color: #f8f9fa;
+          padding: 4rem 0;
+        }
+
+        .content {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+
+        .why-choose h2 {
+          text-align: center;
+          color: #0066cc;
+          margin-bottom: 2rem;
+          font-size: 2.5rem;
+        }
+
+        .reasons-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+        }
+
+        .reason-item {
+          background-color: #ffffff;
+          border-radius: 8px;
+          padding: 1.5rem;
+          text-align: center;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .reason-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .reason-icon {
+          font-size: 2.5rem;
+          color: #0066cc;
+          margin-bottom: 1rem;
+        }
+
+        .reason-item h3 {
+          color: #0066cc;
+          margin-bottom: 0.5rem;
+          font-size: 1.2rem;
+        }
+
+        .reason-item p {
+          font-size: 0.9rem;
+          color: #333;
+          line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+          .reasons-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .why-choose h2 {
+            font-size: 2rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .reasons-grid {
+            grid-template-columns: 1fr;
+          }
+          .why-choose {
+            padding: 3rem 0;
+          }
+          .reason-item {
+            padding: 1rem;
+          }
+          .why-choose h2 {
+            font-size: 1.8rem;
+          }
+          .reason-item h3 {
+            font-size: 1.1rem;
+          }
+          .reason-item p {
+            font-size: 0.8rem;
+          }
+        }
       `}</style>
     </main>
   );

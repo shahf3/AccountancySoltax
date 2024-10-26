@@ -7,7 +7,7 @@ const Footer = () => {
         Your trusted partner for tax solutions and financial advice. 
         We ensure compliance while maximizing your returns.
       </p>
-      <p style={styles.slogan}>“Empowering Your Financial Future”</p>
+      <p style={styles.slogan}>&ldquo;Empowering Your Financial Future&rdquo;</p>
       <p style={styles.copyright}>© {new Date().getFullYear()} Soltax. All rights reserved.</p>
       <p style={styles.links}>
         <span style={styles.separator}>  </span>
@@ -21,9 +21,26 @@ const Footer = () => {
           padding: 2rem 0; /* Padding */
           margin-top: 2rem; /* Space above the footer */
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
           footer {
-            padding: 1rem; /* Smaller padding on mobile */
+            padding: 1.5rem 0;
+          }
+          footer p {
+            font-size: 0.9rem !important;
+          }
+          footer p.slogan {
+            font-size: 1.3rem !important;
+          }
+        }
+        @media (max-width: 480px) {
+          footer {
+            padding: 1rem 0;
+          }
+          footer p {
+            font-size: 0.8rem !important;
+          }
+          footer p.slogan {
+            font-size: 1.1rem !important;
           }
         }
       `}</style>
